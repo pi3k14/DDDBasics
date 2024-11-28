@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net8.0;net9.0</TargetFrameworks>
+    <AssemblyName>Kodefabrikken.DDD.$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>Kodefabrikken.DDD.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0' Or '$(TargetFramework)' == 'net9.0'">
+    <Nullable>enable</Nullable> <!-- NET 6 -->
+    <ImplicitUsings>disable</ImplicitUsings> <!-- NET 6 -->
+  </PropertyGroup>
+
+</Project>
